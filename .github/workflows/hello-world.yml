@@ -10,9 +10,4 @@ jobs:
     steps: 
       - name: Check out repository code
         uses: actions/checkout@v3
-
-      - name: Create hello_world.txt
-        run: echo "Hello, World!" > hello_world.txt
-
-      - name: Display file contents
-        run: cat hello_world.txt
+      - run: echo "$(cat hello_world.txt)"
